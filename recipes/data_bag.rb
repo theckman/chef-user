@@ -61,7 +61,7 @@ Array(user_array).each do |i|
     action user_action
   end
 
-  if !u['groups'].nil? && !user_action.nil? && user_action != :remove
+  if !u['groups'].nil? && user_action != :remove
     u['groups'].each do |groupname|
       group groupname do
         members username
