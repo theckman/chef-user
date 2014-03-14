@@ -101,5 +101,13 @@ describe 'User::Attributes::Default' do
     it "sets default data bag name" do
       @node[attr_ns]['data_bag_name'].must_equal "users"
     end
+
+    it 'sets default for access controls' do
+      @node[attr_ns]['enable_access_controls'].must_equal false
+    end
+
+    it 'sets default for access controls' do
+      @node[attr_ns]['allowed_groups'].must_equal []
+    end
   end
 end
